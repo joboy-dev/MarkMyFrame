@@ -1,7 +1,7 @@
 from tkinter import *
 
 from constants import *
-from .widgets import button, destroy_widgets
+from .widgets import button, destroy_widgets, canvas
 from .main_screen import main_screen
 
 def splash_screen(window):
@@ -19,10 +19,10 @@ def splash_screen(window):
     window.splash_image = splash_image
     
     # set up image
-    canvas = Canvas(master=splash, height=500, width=500, highlightthickness=0)
-    canvas.create_image(250, 250, image=splash_image)
-    canvas.grid(row=0, column=0)
+    canvas_widget = canvas(master=splash)
+    canvas_widget.create_image(250, 250, image=splash_image)
+    canvas_widget.grid(row=0, column=0)
     
-    get_started_button = button(master=splash, text='Get Started >>', click=lambda: main_screen(window))
+    get_started_button = button(master=splash, text='Get Started ->', click=lambda: main_screen(window), justify='center')
     get_started_button.grid(row=1, column=0)
     

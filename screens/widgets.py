@@ -10,8 +10,8 @@ def destroy_widgets(window):
         
 
 
-def button(master, text, click, width=15):
-    '''Widget for customizing buttons easily'''
+def button(master, text, click, width=15, justify='left'):
+    '''Function to display button widget'''
     
     return Button(
         master=master,
@@ -25,6 +25,27 @@ def button(master, text, click, width=15):
         borderwidth=0.1, 
         highlightthickness=0,
         highlightbackground=BG_COLOR,
-        pady=10,
+        pady=5,
         command=click,
+        justify=justify
     )
+    
+
+def label(master, text, justify='left', fg_color=SECONDARY_COLOR):
+    '''Fucntion to display label widget'''
+    
+    return Label(
+        master=master,
+        text=text,
+        bg=BG_COLOR,
+        fg=fg_color,
+        font=TEXT_FONT_SPECS,
+        pady=10,
+        justify=justify,
+    )
+    
+
+def canvas(master, height=500, width=500):
+    '''Function to display canvas'''
+    
+    return Canvas(master=master, height=height, width=width, highlightthickness=0)

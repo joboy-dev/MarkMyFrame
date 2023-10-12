@@ -8,8 +8,8 @@ icon = PhotoImage(file='images/icon.png')
 window.iconphoto(True, icon)
 
 window.title('MarkMyFrame- An Image Watermarking App by Joboy-dev')
-window.minsize(width=800, height=800)
-window.maxsize(width=800, height=800)
+window.minsize(width=850, height=800)
+window.maxsize(width=850, height=800)
 window.config(bg=BG_COLOR, padx=40, pady=20)
 
 # initialize app by loading up the splash screen
