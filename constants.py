@@ -1,0 +1,6 @@
+BG_COLOR = '#EFEBE5'
+PRIMARY_COLOR = '#FF7E73'
+SECONDARY_COLOR = '#776464'
+
+TEXT_FONT_SPECS = ('Lato', 15, 'normal')
+BUTTON_FONT_SPECS = ('Lato', 20, 'bold')
